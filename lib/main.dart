@@ -12,6 +12,9 @@ class AdaptiveDashboardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF7F9FA),
+      ),
       debugShowCheckedModeBanner: false,
       home: DashboardView(),
     );

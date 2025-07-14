@@ -1,3 +1,4 @@
+import 'package:adaptive_dashboard/widget/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -5,8 +6,6 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      
-    );
+    return Scaffold(body: Row(children: [Expanded(child: CustomDrawer())]));
   }
 }
