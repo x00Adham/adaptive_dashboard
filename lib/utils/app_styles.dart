@@ -2,16 +2,16 @@
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
-  static TextStyle styleRegular16(context) {
-    return TextStyle(
-      color: const Color(0xFF064060),
-      fontSize:16,
+  static TextStyle styleRegular16() {
+    return const TextStyle(
+      color: Color(0xFF064060),
+      fontSize: 16,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w400,
     );
   }
 
-  static TextStyle styleBold16(BuildContext context) {
+  static TextStyle styleBold16() {
     return TextStyle(
       color: const Color(0xFF4EB7F2),
       fontSize:16,
@@ -20,7 +20,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleMedium16(BuildContext context) {
+  static TextStyle styleMedium16() {
     return TextStyle(
       color: const Color(0xFF064061),
       fontSize:16,
@@ -29,7 +29,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleMedium20(BuildContext context) {
+  static TextStyle styleMedium20() {
     return TextStyle(
       color: const Color(0xFFFFFFFF),
       fontSize:20,
@@ -38,7 +38,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleSemiBold16(BuildContext context) {
+  static TextStyle styleSemiBold16() {
     return TextStyle(
       color: const Color(0xFF064061),
       fontSize:16,
@@ -47,7 +47,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleSemiBold20(BuildContext context) {
+  static TextStyle styleSemiBold20() {
     return TextStyle(
       color: const Color(0xFF064061),
       fontSize:20,
@@ -56,7 +56,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleRegular12(BuildContext context) {
+  static TextStyle styleRegular12() {
     return TextStyle(
       color: const Color(0xFFAAAAAA),
       fontSize:12,
@@ -65,7 +65,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleSemiBold24(BuildContext context) {
+  static TextStyle styleSemiBold24() {
     return TextStyle(
       color: const Color(0xFF4EB7F2),
       fontSize:24,
@@ -74,7 +74,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleRegular14(BuildContext context) {
+  static TextStyle styleRegular14() {
     return TextStyle(
       color: const Color(0xFFAAAAAA),
       fontSize:14,
@@ -83,7 +83,7 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle styleSemiBold18(BuildContext context) {
+  static TextStyle styleSemiBold18() {
     return TextStyle(
       color: const Color(0xFFFFFFFF),
       fontSize:18,
