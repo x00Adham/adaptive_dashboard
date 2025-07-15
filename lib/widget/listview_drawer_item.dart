@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:adaptive_dashboard/model/drawer_item_model.dart';
 import 'package:adaptive_dashboard/utils/app_images.dart';
@@ -33,9 +32,8 @@ class _ListviewDrawerItemState extends State<ListviewDrawerItem> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+      child: SliverList.builder(
+
         itemCount: ListviewDrawerItem.drawerItems.length,
         itemBuilder: (context, index) {
           return Padding(
