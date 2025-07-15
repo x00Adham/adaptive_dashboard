@@ -2,16 +2,14 @@ import 'package:adaptive_dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class MyexpensesHeaderWidget extends StatelessWidget {
-  const MyexpensesHeaderWidget({
-    super.key,
-  });
+  const MyexpensesHeaderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text("All Expenses", style: AppStyles.styleSemiBold20()),
-        Expanded(child: SizedBox()),
+        Spacer(),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey.shade300),

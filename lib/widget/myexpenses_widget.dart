@@ -1,4 +1,3 @@
-import 'package:adaptive_dashboard/utils/app_styles.dart';
 import 'package:adaptive_dashboard/widget/myexpensesheaderwidget.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +14,13 @@ class MyexpensesWidget extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              MyexpensesHeaderWidget(),
-            ],
+              MyexpensesHeaderWidget(), 
+              SizedBox(height: 18),
+              
+              ],
           ),
         ),
       ),
     );
   }
 }
-
