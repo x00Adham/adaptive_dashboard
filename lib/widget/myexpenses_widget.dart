@@ -35,6 +35,7 @@ class MyexpensesWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Card(
+        elevation: 0,
         color: Color(0xffFFFFFF),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
