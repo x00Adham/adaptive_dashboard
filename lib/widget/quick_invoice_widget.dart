@@ -1,5 +1,6 @@
-import 'package:adaptive_dashboard/utils/app_styles.dart';
+
 import 'package:adaptive_dashboard/widget/quick_invoice_header_widget.dart';
+import 'package:adaptive_dashboard/widget/user_detail_listview_widget.dart';
 import 'package:flutter/material.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
@@ -17,11 +18,9 @@ class QuickInvoiceWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              QuickInvoiceHeaderWidget(),
-              SizedBox(height: 24),
-              
-              
-            ],
+            QuickInvoiceHeaderWidget(),
+             
+            LatestTransactionSession()],
           ),
         ),
       ),

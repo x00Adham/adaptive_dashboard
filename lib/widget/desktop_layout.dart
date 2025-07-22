@@ -1,4 +1,3 @@
-import 'package:adaptive_dashboard/utils/app_styles.dart';
 import 'package:adaptive_dashboard/widget/custom_drawer.dart';
 import 'package:adaptive_dashboard/widget/myexpenses_widget.dart';
 import 'package:adaptive_dashboard/widget/quick_invoice_widget.dart';
@@ -15,17 +14,10 @@ class DesktopLayout extends StatelessWidget {
           Expanded(child: CustomDrawer()),
           Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                MyexpensesWidget(),
-                QuickInvoiceWidget(),
-              ],
-            ),
+            child: Column(children: [MyexpensesWidget(), QuickInvoiceWidget()]),
           ),
         ],
       ),
     );
   }
 }
-
-
