@@ -1,7 +1,5 @@
-import 'package:adaptive_dashboard/utils/app_styles.dart';
-import 'package:adaptive_dashboard/widget/custom_text_filed.dart';
 import 'package:adaptive_dashboard/widget/quick_invoice_header_widget.dart';
-import 'package:adaptive_dashboard/widget/tittle_text_field_widget.dart';
+import 'package:adaptive_dashboard/widget/transactionformwidget.dart';
 import 'package:adaptive_dashboard/widget/user_detail_listview_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -17,22 +15,20 @@ class QuickInvoiceWidget extends StatelessWidget {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              QuickInvoiceHeaderWidget(),
-              LatestTransactionSession(),
-              Divider(height: 48),
-              TittleTextFieldWidget(
-                tittle: "Customer name",
-                hint: "Type customer name",
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                QuickInvoiceHeaderWidget(),
+                LatestTransactionSession(),
+                const Divider(height: 48),
+                TransactionFormWidget(),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
 

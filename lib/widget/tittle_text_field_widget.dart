@@ -3,12 +3,17 @@ import 'package:adaptive_dashboard/widget/custom_text_filed.dart';
 import 'package:flutter/material.dart';
 
 class TittleTextFieldWidget extends StatelessWidget {
-  const TittleTextFieldWidget({super.key, required this.tittle, required this.hint});
+  const TittleTextFieldWidget({
+    super.key,
+    required this.tittle,
+    required this.hint,
+  });
   final String tittle, hint;
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(tittle, style: AppStyles.styleMedium16()),

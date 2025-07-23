@@ -49,27 +49,22 @@ class _LatestTransactionSessionState extends State<LatestTransactionSession> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: 24),
         Text("Latest Transaction", style: AppStyles.styleMedium16()),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         SizedBox(
-          height:
-              MediaQuery.of(context).size.height *
-              0.09, // Responsive height (adjust as needed)
-          child: SingleChildScrollView(
+          height: MediaQuery.of(context).size.height * 0.1,
+          child: ListView.builder(
+            itemCount: items.length,
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children:
-                  items
-                      .map(
-                        (item) => IntrinsicWidth(
-                          child: UserInfoListTile(userDetailsModel: item),
-                        ),
-                      )
-                      .toList(),
-            ),
+            itemBuilder: (context, index) {
+              return IntrinsicWidth(
+                child: UserInfoListTile(userDetailsModel: items[index]),
+              );
+            },
           ),
         ),
       ],
