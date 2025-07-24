@@ -1,7 +1,6 @@
 import 'package:adaptive_dashboard/widget/custom_drawer.dart';
 import 'package:adaptive_dashboard/widget/middle_section.dart';
-import 'package:adaptive_dashboard/widget/myexpenses_widget.dart';
-import 'package:adaptive_dashboard/widget/quick_invoice_widget.dart';
+import 'package:adaptive_dashboard/widget/mycardsection.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -12,15 +11,17 @@ class DesktopLayout extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(child: CustomDrawer()),
+          Expanded(flex: 1, child: CustomDrawer()),
+          Expanded(flex: 3, child: MiddelSectionWidget()),
           Expanded(
             flex: 2,
-            child: MiddelSectionWidget(),
+            child: MyCardSection(),
           ),
         ],
       ),
     );
   }
 }
+
 
 
