@@ -10,6 +10,8 @@ abstract class AppStyles {
     );
   }
 
+  
+
   static TextStyle styleRegular16w() {
     return const TextStyle(
       color: Colors.white,
@@ -31,6 +33,14 @@ abstract class AppStyles {
   static TextStyle styleMedium16() {
     return TextStyle(
       color: const Color(0xFF064061),
+      fontSize: 16,
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w500,
+    );
+  }
+  static TextStyle styleMedium16b() {
+    return TextStyle(
+      color: const Color(0xFF4EB7F2),
       fontSize: 16,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.w500,

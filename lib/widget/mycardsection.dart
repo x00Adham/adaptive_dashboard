@@ -12,7 +12,7 @@ class MyCardSection extends StatefulWidget {
 
 class _MyCardSectionState extends State<MyCardSection> {
   late PageController pageController;
-   int pageIndex= 0;
+  int pageIndex = 0;
   @override
   void initState() {
     super.initState();
@@ -43,6 +43,22 @@ class _MyCardSectionState extends State<MyCardSection> {
               SizedBox(height: 9),
 
               IndecatorSection(pageindex: pageIndex),
+
+              Divider(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Transaction History",
+                    style: AppStyles.styleSemiBold20(),
+                  ),
+                  Text("See all", style: AppStyles.styleMedium16b()),
+                ],
+              ),
+              SizedBox(height: 20),
+              Text("13 April 2022",style: AppStyles.styleMedium16(),),
+              SizedBox(height: 16,)
+              
             ],
           ),
         ),
