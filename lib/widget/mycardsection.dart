@@ -3,8 +3,27 @@ import 'package:adaptive_dashboard/widget/indecator_section.dart';
 import 'package:adaptive_dashboard/widget/mycardpageview.dart';
 import 'package:flutter/material.dart';
 
-class MyCardSection extends StatelessWidget {
+class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});
+
+  @override
+  State<MyCardSection> createState() => _MyCardSectionState();
+}
+
+class _MyCardSectionState extends State<MyCardSection> {
+  late PageController pageController;
+   int pageIndex= 0;
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+    pageController.addListener(() {
+      setState(() {
+        pageIndex = pageController.page!.round();
+      });
+    });
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +39,10 @@ class MyCardSection extends StatelessWidget {
             children: [
               Text("My card", style: AppStyles.styleSemiBold20()),
               SizedBox(height: 20),
-              MyCardPageView(),
-              SizedBox(height: 19),
+              MyCardPageView(pageController: pageController),
+              SizedBox(height: 9),
 
-              IndecatorSection(),
+              IndecatorSection(pageindex: pageIndex),
             ],
           ),
         ),
