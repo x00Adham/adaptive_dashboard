@@ -1,4 +1,5 @@
 import 'package:adaptive_dashboard/utils/app_styles.dart';
+import 'package:adaptive_dashboard/widget/indecator_widget.dart';
 import 'package:adaptive_dashboard/widget/mycardwidget.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,8 @@ class MyCardSection extends StatelessWidget {
               Text("My card", style: AppStyles.styleSemiBold20()),
               SizedBox(height: 20),
               MyCardWidget(),
+              SizedBox(height: 9),
+              IndecatorWidget(isActive: false),
             ],
           ),
         ),
