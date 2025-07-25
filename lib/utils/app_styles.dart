@@ -20,6 +20,14 @@ abstract class AppStyles {
       fontWeight: FontWeight.w400,
     );
   }
+  static TextStyle styleRegular16g() {
+    return const TextStyle(
+      color: Color(0xffAAAAAA),
+      fontSize: 16,
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w400,
+    );
+  }
 
   static TextStyle styleBold16() {
     return TextStyle(

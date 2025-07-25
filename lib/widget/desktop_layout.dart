@@ -13,15 +13,9 @@ class DesktopLayout extends StatelessWidget {
         children: [
           Expanded(flex: 1, child: CustomDrawer()),
           Expanded(flex: 3, child: MiddelSectionWidget()),
-          Expanded(
-            flex: 2,
-            child: MyCardSection(),
-          ),
+          Expanded(flex: 2, child: MyCardSection()),
         ],
       ),
     );
   }
 }
-
-
-

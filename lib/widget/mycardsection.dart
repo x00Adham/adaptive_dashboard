@@ -1,6 +1,7 @@
 import 'package:adaptive_dashboard/utils/app_styles.dart';
 import 'package:adaptive_dashboard/widget/indecator_section.dart';
 import 'package:adaptive_dashboard/widget/mycardpageview.dart';
+import 'package:adaptive_dashboard/widget/transaction_listview.dart';
 import 'package:flutter/material.dart';
 
 class MyCardSection extends StatefulWidget {
@@ -56,9 +57,9 @@ class _MyCardSectionState extends State<MyCardSection> {
                 ],
               ),
               SizedBox(height: 20),
-              Text("13 April 2022",style: AppStyles.styleMedium16(),),
-              SizedBox(height: 16,)
-              
+              Text("13 April 2022", style: AppStyles.styleMedium16()),
+              SizedBox(height: 16),
+              TransactionListview(),
             ],
           ),
         ),
