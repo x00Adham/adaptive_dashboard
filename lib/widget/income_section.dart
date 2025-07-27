@@ -1,3 +1,5 @@
+
+import 'package:adaptive_dashboard/widget/chart_details_list_view.dart';
 import 'package:adaptive_dashboard/widget/income_chart_widget.dart';
 import 'package:adaptive_dashboard/widget/incomeheaderwidget.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,15 @@ class IncomeSection extends StatelessWidget {
             IncomeHeaderWidget(),
             SizedBox(height: 28),
             Expanded(
-              child: IncomeChartWidget(),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(flex: 1, child: IncomeChartWidget()),
+
+                  Expanded(flex: 2, child: ChartDetailsListView()),
+                ],
+              ),
             ),
           ],
         ),
