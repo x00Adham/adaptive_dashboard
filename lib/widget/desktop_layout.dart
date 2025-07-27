@@ -1,6 +1,6 @@
 import 'package:adaptive_dashboard/widget/custom_drawer.dart';
-import 'package:adaptive_dashboard/widget/income_section.dart';
 import 'package:adaptive_dashboard/widget/middle_section.dart';
+import 'package:adaptive_dashboard/widget/right_section.dart';
 import 'package:flutter/material.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -13,7 +13,7 @@ class DesktopLayout extends StatelessWidget {
         children: [
           Expanded(flex: 1, child: CustomDrawer()),
           Expanded(flex: 3, child: MiddelSectionWidget()),
-          Expanded(flex: 2, child: IncomeSection()),
+          Expanded(flex: 2, child: RightSection()),
         ],
       ),
     );
