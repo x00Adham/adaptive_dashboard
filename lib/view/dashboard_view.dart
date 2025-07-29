@@ -1,5 +1,6 @@
 import 'package:adaptive_dashboard/widget/adaptive_layout_widget.dart';
 import 'package:adaptive_dashboard/widget/desktop_layout.dart';
+import 'package:adaptive_dashboard/widget/mobilelayout.dart';
 import 'package:adaptive_dashboard/widget/tablet_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveLayoutWidget(
       desktopLayout: (context) => DesktopLayout(),
-      mobileLayout: (context) => SizedBox(),
+      mobileLayout: (context) => Mobilelayout(),
       tabletLayout: (context) => TabletLayout(),
     );
   }
