@@ -12,8 +12,22 @@ class DesktopLayout extends StatelessWidget {
       body: Row(
         children: [
           Expanded(flex: 1, child: CustomDrawer()),
-          Expanded(flex: 3, child: MiddelSectionWidget()),
-          Expanded(flex: 2, child: RightSection()),
+          Expanded(
+            flex: 4,
+            child: CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Row(
+                    children: [
+                      Expanded(flex: 3, child: MiddelSectionWidget()),
+                      Expanded(flex: 2, child: RightSection()),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -3,9 +3,7 @@ import 'package:adaptive_dashboard/widget/mycardsection.dart';
 import 'package:flutter/material.dart';
 
 class RightSection extends StatelessWidget {
-  const RightSection({
-    super.key,
-  });
+  const RightSection({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ChartDetailsListView extends StatelessWidget {
   const ChartDetailsListView({super.key});
 
-  static final List<ChartDetailsModel> _items = [
+  static final List<ChartDetailsModel> items = [
     ChartDetailsModel(
       title: "Design service",
       value: "40%",
@@ -26,20 +26,23 @@ class ChartDetailsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: _items.length,
-      itemBuilder:
-          (context, index) => ListTile(
-            leading: CircleAvatar(
-              backgroundColor: _items[index].color,
-              radius: 6,
-            ),
-            title: Text(_items[index].title, style: AppStyles.styleRegular16()),
-            trailing: Text(
-              _items[index].value,
-              style: AppStyles.styleRegular16(),
-            ),
-          ),
+    return Column(
+      children: items.map((e) => ChartDetailItem(item: e)).toList(),
+    );
+  }
+}
+
+class ChartDetailItem extends StatelessWidget {
+  const ChartDetailItem({super.key, required this.item});
+
+  final ChartDetailsModel item;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(backgroundColor: item.color, radius: 6),
+      title: Text(item.title, style: AppStyles.styleRegular16()),
+      trailing: Text(item.value, style: AppStyles.styleRegular16()),
     );
   }
 }

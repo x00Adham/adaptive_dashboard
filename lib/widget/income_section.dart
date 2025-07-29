@@ -1,4 +1,3 @@
-
 import 'package:adaptive_dashboard/widget/chart_details_list_view.dart';
 import 'package:adaptive_dashboard/widget/income_chart_widget.dart';
 import 'package:adaptive_dashboard/widget/incomeheaderwidget.dart';
@@ -36,4 +35,3 @@ class IncomeSection extends StatelessWidget {
     );
   }
 }
-

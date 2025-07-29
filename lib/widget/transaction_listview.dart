@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class TransactionListview extends StatelessWidget {
   TransactionListview({super.key});
-  final List<TransactionModel> item = [
+  final List<TransactionModel> items = [
     TransactionModel(
       title: "Cash Withdrawal",
       time: "13 Apr, 2022",
@@ -27,30 +27,33 @@ class TransactionListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: item.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(item[index].title, style: AppStyles.styleSemiBold16()),
-            subtitle: Text(
-              item[index].time,
-              style: AppStyles.styleRegular16g(),
-            ),
-            trailing: Text(
-              item[index].ammount,
-              style: TextStyle(
-                color:
-                    item[index].withdrawal
-                        ? const Color(0xFFF3735E)
-                        : const Color(0xff7DD97B),
-                fontSize: 20,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          );
-        },
+    return Column(
+      children: items.map((e) => TransactionItem(item: e)).toList(),
+    );
+  }
+}
+
+class TransactionItem extends StatelessWidget {
+  const TransactionItem({super.key, required this.item});
+
+  final TransactionModel item;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(item.title, style: AppStyles.styleSemiBold16()),
+      subtitle: Text(item.time, style: AppStyles.styleRegular16g()),
+      trailing: Text(
+        item.ammount,
+        style: TextStyle(
+          color:
+              item.withdrawal
+                  ? const Color(0xFFF3735E)
+                  : const Color(0xff7DD97B),
+          fontSize: 20,
+          fontFamily: 'Montserrat',
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }
